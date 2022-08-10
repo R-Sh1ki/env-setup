@@ -1,4 +1,7 @@
 # Ubuntu 22.04 Setup
+
+![Tweaks](./imgs/desktop.png)
+
 ## 0. Network Prepare
 
 I think it's necessary to install some tools to confirm that we can easily connect to github and raw.githubusercontent.com. I use `clash for windows pkg` and configurate proxy maually. And I will add raw.githubusercontent.com ip to hosts (you can find details on `./dotfiles/hosts`). Here is the parser for lastest clash to solve timeout problem (You also can find it in clash_for_windows_pkg issues).
