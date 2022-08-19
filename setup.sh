@@ -23,4 +23,6 @@ confirm ./modules/6-tmux.sh "[6] Install tmux?"
 
 confirm ./modules/7-refind.sh "[7] Install refind?"
 
-confirm ./modules/8-ctf.sh "[8] Install CTF tools?"
+confirm ./modules/8-nvim.sh "[8] Install neovim?"
+
+confirm ./modules/9-ctf.sh "[9] Install CTF tools?"
