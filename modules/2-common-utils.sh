@@ -16,8 +16,12 @@ sudo apt-get install -y build-essential cmake
 desc "Install input method..."
 sudo apt-get install -y fcitx5 fcitx5-chinese-addons
 
-desc "Install neovim..."
-sudo apt-get install -y neovim
+desc "Install nerd-font..."
+git clone https://github.com/ryanoasis/nerd-fonts.git
+cd nerd-fonts
+./install.sh
+cd ../
+rm -rf nerd-fonts
 
 desc "Install google chrome..."
 is_installed=$(dpkg --get-selections | grep google-chrome-stable)
