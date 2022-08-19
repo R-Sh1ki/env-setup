@@ -113,4 +113,5 @@ I use rEFInd as boot manager. After install it by the script, you should to modi
 
 ### 2.6 Neovim
 
-To be continued...
+You can find my individual neovim configs on [here](https://github.com/R-Sh1ki/nvim). You need install to neovim dependency before install neovim configs.
+
