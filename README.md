@@ -4,7 +4,7 @@
 
 ## 0. Network Prepare
 
-I think it's necessary to install some tools to confirm that we can easily connect to github and raw.githubusercontent.com. I use `clash for windows pkg` and configurate proxy maually. And I will add raw.githubusercontent.com ip to hosts (you can find details on `./dotfiles/hosts`). Here is the parser for lastest clash to solve timeout problem (You also can find it in clash_for_windows_pkg issues).
+I think it's necessary to install some tools to confirm that we can easily connect to GitHub and raw.githubusercontent.com. I use `clash for windows pkg` and configure proxy manually. And I will add raw.githubusercontent.com ip to hosts (you can find details on `./dotfiles/hosts`). Here is the parser for latest clash to solve timeout problem (You also can find it in clash_for_windows_pkg issues).
 
 ```bash
 parsers: # array
@@ -29,7 +29,7 @@ parsers: # array
 
 ## 1. Usage
 
-It's easy to run `setup.sh`  and select your favorite option to install software and configure  settings. **Do not use `sudo ./setup.sh`**
+It's easy to run `setup.sh` and select your favorite option to install software and configure settings. **Do not use `sudo ./setup.sh`**
 
 ```bash
 # clone env-setup project
@@ -54,11 +54,11 @@ We may meet some problems if we use `fcitx` and `sogou-pinyin` input method on U
 
 ### 2.2 ZSH & oh-my-zsh
 
-You can replace `~/.zshrc` with the`./dotfiles/.zshrc` . 
+You can replace `~/.zshrc` with the`./dotfiles/.zshrc`. 
 
 ### 2.3 Tmux
 
-You can replace `~/.tmux.conf` with the `./dotfiles/.zshrc` , and execute `prefix+I` to install some tmux plugins.  
+You can replace `~/.tmux.conf` with the `./dotfiles/.zshrc`, and execute `prefix+I` to install some tmux plugins.  
 
 ### 2.4 Gnome
 
@@ -88,7 +88,7 @@ I use the default dock on Ubuntu 22.04. We can set up the dock properties on `Se
 
 ### 2.5 rEFInd
 
-I use rEFInd as boot manager. After install it by the script, you should to modify some parameters as the following statement shows (You need to git clone refind-ambience theme and copy files to /boot/efi/EFI/refind/themes/):
+I use rEFInd as boot manager. After install it by the script, you should to modify some parameters as the following statement shows (You need to clone refind-ambience theme and copy files to /boot/efi/EFI/refind/themes/):
 
 - Edit`/boot/efi/EFI/refind/refind.conf` and add configurations at the end.
 
@@ -113,5 +113,5 @@ I use rEFInd as boot manager. After install it by the script, you should to modi
 
 ### 2.6 Neovim
 
-You can find my individual neovim configs on [here](https://github.com/R-Sh1ki/nvim). You need install to neovim dependency before install neovim configs.
+You can find my individual neovim configs on [here](https://github.com/R-Sh1ki/nvim). You need to install neovim first before add dotfiles.
 
