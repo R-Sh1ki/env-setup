@@ -25,4 +25,4 @@ confirm ./modules/7-refind.sh "[7] Install refind?"
 
 confirm ./modules/8-nvim.sh "[8] Install neovim?"
 
-confirm ./modules/9-ctf.sh "[9] Install CTF tools?"
+confirm ./modules/9-latex.sh "[9] Install Latex?"
