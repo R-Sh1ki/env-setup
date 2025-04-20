@@ -1,0 +1,64 @@
+format = """
+$shell [$directory](bold cyan)($git_branch$git_state$git_status$git_metrics)
+$time $username [»](bold green) """
+
+[shell]
+format = '[❮](bold yellow)[$indicator]($style)[❯](bold yellow)'
+powershell_indicator = 'pwsh'
+fish_indicator = 'fish'
+bash_indicator = 'bash'
+unknown_indicator = 'mystery shell'
+style = 'cyan bold'
+disabled = false
+
+[sudo]
+style = 'bold green'
+symbol = ' ‍  '
+disabled = false
+
+[git_branch]
+style = "bold green"
+format = "[\\[[$symbol$branch$tag](blod green)\\]](bold white)"
+symbol = "\ue725 "
+
+[git_status]
+format = ' ([\[$conflicted$deleted$renamed$modified$staged$untracked$ahead_behind\]]($style))'
+
+[directory]
+style = "bold cyan"
+truncate_to_repo = false
+truncation_length = 1
+fish_style_pwd_dir_length = 1
+
+[python]
+scan_for_pyfiles = false
+
+[ruby]
+disabled = true
+
+[swift]
+disabled = true
+
+[c]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[docker_context]
+symbol = " "
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style)"
+style = "bold white"
+
+[username]
+show_always = true
+style_user = "bold white"
+format = "[$user]($style)"
+
+[time]
+disabled = false
+format = "[$time]($style)"
+time_format = "%H:%M"
