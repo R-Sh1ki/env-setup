@@ -1,4 +1,4 @@
-This (repo)[https://github.com/R-Sh1ki/env-setup.git] contians personalized configurations for different OS (Windows and Ubuntu).
+This [repo](https://github.com/R-Sh1ki/env-setup.git) contians personalized configurations for different OS (Windows and Ubuntu).
 By selecting the corresponding branch, we can quickly configure it via the setup script.
 
 ```bash
@@ -14,7 +14,7 @@ git clone --branch ubuntu https://github.com/R-Sh1ki/env-setup.git && cd env-set
 
 ### Windows
 For windows, there is only a simple configuration of the PowerShell terminal here. 
-We choose `starship` to personalize the terminal, you need to pre-install (Nerd Font)[https://www.nerdfonts.com/] to support the display of some symbols.
+We choose `starship` to personalize the terminal, you need to pre-install [Nerd Font](https://www.nerdfonts.com/) to support the display of some symbols.
 Then, open the terminal as administrator and execute `setup.ps1`
 ![PowerShell](./assets/PowerShell.png)
 
