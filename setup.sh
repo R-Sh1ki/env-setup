@@ -1,28 +1,21 @@
 #!/bin/bash
 
-if [[ -z $format_sourced ]]; then
-	source ./libs/format-output.sh
+if [[ -z $format_output ]]; then
+	source ./include/format_output.sh
 fi
 
-sudo chmod u+x ./modules/*.sh
+sudo chmod u+x ./module/*.sh
 
-desc "[0] Checking system info..."
-./modules/0-system-info.sh
+./module/systeminfo_display.sh
 
-confirm ./modules/1-system-update.sh "[1] Update softwares?"
+confirmation "[1] Do you want to change the source and update the software?" ./module/software_update.sh
 
-confirm ./modules/2-common-utils.sh "[2] Install common utils?"
+confirmation "[2] Do you want to uninstall uncommon software (snap, libreoffice)?" ./module/remove_software.sh
 
-confirm ./modules/3-zsh.sh "[3] Install zsh?"
+confirmation "[3] Do you want to install common utils?" ./module/common_utils.sh
 
-confirm ./modules/4-tweaks.sh "[4] Install gnome?"
+confirmation "[4] Do you want to optimize the appearance?" ./module/appearance.sh
 
-confirm ./modules/5-settings.sh "[5] Time synchronization?"
+confirmation "[5] Do you want to install and set ZSH as the default shell?" ./module/zsh.sh
 
-confirm ./modules/6-tmux.sh "[6] Install tmux?"
-
-confirm ./modules/7-refind.sh "[7] Install refind?"
-
-confirm ./modules/8-nvim.sh "[8] Install neovim?"
-
-confirm ./modules/9-latex.sh "[9] Install Latex?"
+confirmation "[6] Do you want to install tmux?" ./module/tmux.sh
