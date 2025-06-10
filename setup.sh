@@ -19,3 +19,5 @@ confirmation "[4] Do you want to optimize the appearance?" ./module/appearance.s
 confirmation "[5] Do you want to install and set ZSH as the default shell?" ./module/zsh.sh
 
 confirmation "[6] Do you want to install tmux?" ./module/tmux.sh
+
+confirmation "[7] Do you want to install nodejs?" ./module/nodejs.sh
