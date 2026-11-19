@@ -1,0 +1,18 @@
+theme = Ayu 
+scrollbar = never
+macos-titlebar-style = hidden
+background-opacity = 0.95
+background-blur = true
+unfocused-split-opacity = 0.5
+
+font-size = 13
+adjust-icon-height = 200%
+adjust-cell-height = 15%
+adjust-underline-position = 1
+
+window-padding-x = 6 
+window-padding-y = 0 
+window-padding-balance = true
+window-padding-color = background
+
+shell-integration-features = ssh-env,ssh-terminfo
