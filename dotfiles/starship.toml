@@ -1,0 +1,133 @@
+add_newline = true
+
+format = """
+$battery\
+$directory\
+$git_branch\
+$git_status\
+$c\
+$cmake\
+$cpp\
+$dart\
+$golang\
+$nodejs\
+$python\
+$rust\
+$typst\
+$line_break\
+$os\
+$time\
+$username\
+$character"""
+
+[directory]
+style = "cyan"
+truncation_length = 1
+format = "[$path]($style) "
+
+[git_branch]
+style = "blue"
+symbol = " "
+format = 'on [$symbol$branch]($style) '
+
+[git_status]
+style = "red"
+format = '([\[$all_status$ahead_behind\]]($style) )'
+
+[os]
+style = 'white'
+format = '[$symbol]($style)'
+disabled = false
+
+[os.symbols]
+Kali = " "
+Macos = " "
+Raspbian = " "
+Ubuntu = " "
+Windows = " "
+
+[time]
+disabled = false
+format = "at [$time](3) "
+time_format = "%T"
+
+[username]
+show_always = true
+style_user = "blue"
+format = '[$user]($style) '
+
+[character]
+disabled = false
+success_symbol = '[»](bold green)'
+error_symbol = '[»](bold red)'
+vimcmd_symbol = '[](bold green)'
+vimcmd_replace_one_symbol = '[](bold purple)'
+vimcmd_replace_symbol = '[](bold purple)'
+vimcmd_visual_symbol = '[](bold yellow)'
+
+[battery]
+disabled = false
+format = '[$symbol]($style)'
+full_symbol = '󰁹 '
+charging_symbol = '󰂄 '
+discharging_symbol = '󰂃 '
+empty_symbol = '󰁺 '
+unknown_symbol= '󰁹 '
+
+[[battery.display]]
+threshold = 100
+style = 'green'
+
+[[battery.display]]
+threshold = 60
+style = 'yellow'
+
+[[battery.display]]
+threshold = 20
+style = 'red'
+
+[c]
+symbol = " "
+style = "blue"
+format = 'via [$symbol$version]($style) '
+
+[cmake]
+symbol = " "
+style = "blue"
+format = 'via [$symbol$version]($style) '
+
+[cpp]
+symbol = " "
+style = "blue"
+format = 'via [$symbol$version]($style) '
+disabled = false
+
+[dart]
+symbol = " "
+style = "cyan"
+format = 'via [$symbol$version]($style) '
+
+[golang]
+symbol = "󰟓 "
+style = "cyan"
+format = 'via [$symbol$version]($style) '
+
+[nodejs]
+symbol = "󰎙 "
+style = "green"
+format = 'via [$symbol$version]($style) '
+
+[python]
+symbol = " "
+style = "blue"
+format = 'via [$symbol$version( \($virtualenv\))]($style) '
+
+[rust]
+symbol = " "
+style = "yellow"
+format = 'via [$symbol$version]($style) '
+
+[typst]
+symbol = " "
+style = "cyan"
+format = 'via [$symbol$version]($style) '
