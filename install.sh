@@ -8,35 +8,36 @@ source "$repodir/scripts/lib/common.sh"
 prepare_paths
 
 # Install prerequisites in this order.
-prerequisites=(apt zsh)
+# prerequisites=(apt zsh)
+prerequisites=(zsh)
 
 confirm() {
-    local reply
+  local reply
 
-    prompt INSTALL "$1 [Y/n]"
-    read -r reply
-    [[ -z $reply || $reply =~ ^[Yy]$ ]]
+  prompt INSTALL "$1 [Y/n]"
+  read -r reply
+  [[ -z $reply || $reply =~ ^[Yy]$ ]]
 }
 
 run_installers() {
-    local script label prerequisite
+  local script label prerequisite
 
-    for script in "$repodir"/scripts/*.sh; do
-        [[ -f $script ]] || continue
-        label="$(basename "${script%.sh}")"
+  for script in "$repodir"/scripts/*.sh; do
+    [[ -f $script ]] || continue
+    label="$(basename "${script%.sh}")"
 
-        for prerequisite in "${prerequisites[@]}"; do
-            [[ $label == "$prerequisite" ]] && continue 2
-        done
-
-        if confirm "Install ${label}?"; then
-            repodir="$repodir" bash "$script"
-        fi
+    for prerequisite in "${prerequisites[@]}"; do
+      [[ $label == "$prerequisite" ]] && continue 2
     done
+
+    if confirm "Install ${label}?"; then
+      repodir="$repodir" bash "$script"
+    fi
+  done
 }
 
 for prerequisite in "${prerequisites[@]}"; do
-    repodir="$repodir" bash "$repodir/scripts/$prerequisite.sh"
+  repodir="$repodir" bash "$repodir/scripts/$prerequisite.sh"
 done
 
 run_installers

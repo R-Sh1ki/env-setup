@@ -13,7 +13,12 @@ fi
 
 mkdir -p "$configdir/zsh"
 for config in alias proxy; do
-    install -m 0644 "$repodir/dotfiles/zsh/$config.zsh" "$configdir/zsh/$config.zsh"
+    destination="$configdir/zsh/$config.zsh"
+    if [[ ! -e $destination && ! -L $destination ]]; then
+        install -m 0644 "$repodir/dotfiles/zsh/$config.zsh" "$destination"
+    else
+        log "Keeping existing $destination."
+    fi
 done
 
 zshrc="${ZDOTDIR:-$HOME}/.zshrc"
